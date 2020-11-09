@@ -28,3 +28,11 @@ var studenti = [{
         "Età": 29
     }
 ]
+
+for (var i = 0; i < studenti.length; i++) {
+    $('.studenti').append("<b>Nome</b>: " + studenti[i].Nome)
+    $('.studenti').append(" <b>Cognome</b>: " + studenti[i].Cognome + "<br>")
+    console.log(studenti[i].Nome)
+}
+
+// ESERCIZIO TRE
