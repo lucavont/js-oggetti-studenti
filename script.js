@@ -8,7 +8,6 @@ var studente_1 = {
 
 for (var key in studente_1) {
     $('.studente-1').append(key).append(": " + studente_1[key] + "<br>");
-    console.log(studente_1[key])
 }
 
 // ESERCIZIO DUE
@@ -30,9 +29,10 @@ var studenti = [{
 ]
 
 for (var i = 0; i < studenti.length; i++) {
-    $('.studenti').append("<b>Nome</b>: " + studenti[i].Nome)
-    $('.studenti').append(" <b>Cognome</b>: " + studenti[i].Cognome + "<br>")
-    console.log(studenti[i].Nome)
+    $('.studenti').append("<br><b>L'anagrafica dello studente è: </b><br>")
+    for (var key in studenti[i]) {
+        $('.studenti').append(key + ":" + studenti[i][key] + "<br>")
+    }
 }
 
 // ESERCIZIO TRE
