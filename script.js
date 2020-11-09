@@ -31,8 +31,27 @@ var studenti = [{
 for (var i = 0; i < studenti.length; i++) {
     $('.studenti').append("<br><b>L'anagrafica dello studente è: </b><br>")
     for (var key in studenti[i]) {
-        $('.studenti').append(key + ":" + studenti[i][key] + "<br>")
+        $('.studenti').append(key + ": " + studenti[i][key] + "<br>")
     }
 }
 
 // ESERCIZIO TRE
+
+var nuovoStudente = {
+    'Nome': undefined,
+    'Cognome': undefined,
+    'Età': undefined
+};
+
+nuovoStudente.Nome = prompt('Inserisci il tuo nome:');
+nuovoStudente.Cognome = prompt('Inserisci il tuo cognome:');
+nuovoStudente.Età = parseInt(prompt('Inserisci la tua età:'));
+
+studenti.push(nuovoStudente);
+
+for (var i = 0; i < studenti.length; i++) {
+    $('.nuovo-studente').append("<br><b>L'anagrafica dello studente è: </b><br>")
+    for (var key in studenti[i]) {
+        $('.nuovo-studente').append(key + ": " + studenti[i][key] + "<br>")
+    }
+}
