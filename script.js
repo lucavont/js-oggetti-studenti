@@ -49,8 +49,8 @@ nuovoStudente.Età = parseInt(prompt('Inserisci la tua età:'));
 studenti.push(nuovoStudente);
 
 for (var i = 0; i < studenti.length; i++) {
-    $('.nuovo-studente').append("<br><b>L'anagrafica dello studente è: </b><br>")
-    for (var key in studenti[i]) {
-        $('.nuovo-studente').append(key + ": " + studenti[i][key] + "<br>")
-    }
+    $('.nuovo-studente').append("<b>Nome</b>: " + studenti[i].Nome)
+    $('.nuovo-studente').append(" <b>Cognome</b>: " + studenti[i].Cognome)
+    $('.nuovo-studente').append(" <b>Età</b>: " + studenti[i].Età + "<br>")
+    console.log(studenti[i].Nome)
 }
